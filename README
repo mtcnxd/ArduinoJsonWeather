@@ -1,0 +1,6 @@
+Arduino JSON Weather
+
+Un proyecto simple para conectar a una API del clima por medio del cliente http de las librerías estándar de Arduino.
+
+Este proyecto usa un ESP8266
+
