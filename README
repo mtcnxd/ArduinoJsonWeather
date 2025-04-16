@@ -1,6 +1,10 @@
 Arduino JSON Weather
 
-Un proyecto simple para conectar a una API del clima por medio del cliente http de las librerías estándar de Arduino.
+Un proyecto simple para conectar a la API del clima (http://api.openweathermap.org) 
+Este proyecto utiliza el cliente http de las librerías estándar de Arduino ESP (ESP8266HTTPClient).
 
-Este proyecto usa un ESP8266
+Para realizar la conexion a internet se utiliza la libreria: WiFiManager
+
+Esta libreria ayuda a configurar la conexion WIFI en modo AP utilizando un dispositivo externo como
+un celular o una laptop. La libreria genera una red WIFI y una web donde se pueden escanear las redes.
 
