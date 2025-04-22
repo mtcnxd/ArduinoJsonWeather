@@ -4,7 +4,7 @@
 #include <ESP8266HTTPClient.h>
 #include <ArduinoJson.h>
 
-const long interval = 10000; // Each 10 seconds
+const long interval = 15000; // Each 10 seconds
 unsigned long lastMillis = 0;
 
 void setup() {
@@ -36,5 +36,7 @@ void loop() {
         float temperature = doc["main"]["temp"];
         Serial.print("Temperature: ");
         Serial.println(kelvinToCelsius(temperature));
+        delay(1000);
+        postRequest();
     }
 }

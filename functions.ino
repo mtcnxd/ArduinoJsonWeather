@@ -1,7 +1,29 @@
-void postRequest(){
+void postRequest()
+{
+    // This method does not works yet! :-S
+
+    WiFiClient client;
+    HTTPClient http;
+
+    http.begin(client, "https://www.mecanicarubio.com/arduino.php");
+    http.addHeader("Content-Type", "application/json");
+
+    String jsonData = "{}";
+
+    int httpResponseCode = http.POST(jsonData);
+
+    String response = http.getString();
+    
+    Serial.println("Code:");
+    Serial.println(httpResponseCode);
+    Serial.println("Response:");
+    Serial.println(response);
+
+    http.end();
 }
 
-String getRequest() {
+String getRequest()
+{
     WiFiClient client;
     HTTPClient http;
 
@@ -10,6 +32,7 @@ String getRequest() {
     return http.getString();
 }
 
-float kelvinToCelsius(float kelvin){
+float kelvinToCelsius(float kelvin)
+{
     return kelvin -273.15;
 }
